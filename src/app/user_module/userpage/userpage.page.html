@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      
+    </ion-buttons>
+    <ion-title color="light">PayGrep</ion-title>
+    <ion-buttons slot="end">
+      <ion-button color="light" routerLink="/login">
+        Signout
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list color="secondary">
+    <ion-item color="secondary">
+      <ion-avatar slot="start">
+        <img src="https://i.pinimg.com/originals/51/f6/fb/51f6fb256629fc755b8870c801092942.png"/>
+      </ion-avatar>
+      <ion-label>
+        <h1>thinagaran</h1>  
+      </ion-label>
+    </ion-item>
+  </ion-list>
+ 
+  <ion-row class="ion-align-items-end">
+    <ion-col>
+      <div> 
+        <img src="./assets/makepayment.png"/>
+        <div>
+          <ion-button color="dark" fill="clear" routerLink="/userpage/makepayment">MAKE PAYMENT</ion-button>
+        </div>
+      </div>
+    </ion-col>
+    <ion-col class="ion-align-self-start">
+      <div>
+        <img src="./assets/recievepayment.png"/>
+        <div>
+          <ion-button color="dark" fill="clear" routerLink="/userpage/recievepayment">RECIEVE PAYMENT</ion-button>
+        </div>
+      </div>
+    </ion-col>
+    <ion-col>
+      <div><img src="./assets/billpay.png"/>
+        <div><ion-button color="dark" fill="clear"routerLink="/userpage/billpay" >BILL PAY</ion-button></div></div>
+    </ion-col>
+    <ion-col>
+     
+    <div>
+      <img src="./assets/cards.png"/>
+      <div>
+        <ion-button color="dark" fill="clear" routerLink="/userpage/cards" >CARDS</ion-button>
+      </div>
+    </div>
+      
+    </ion-col>
+  </ion-row>
+
+  <div class="flex-center">
+    <ion-button color="secondary" fill="clear" >HISTORY...</ion-button>
+  </div>
+</ion-content>

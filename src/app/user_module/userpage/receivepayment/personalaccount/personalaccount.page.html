@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-button color="dark" size="full"  routerLink="/userpage/receivepayment">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+    </ion-button>
+    </ion-buttons>
+    <ion-title color="dark" > ADD PERSONAL ACCOUNT</ion-title>
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content class="ion-padding" >
+  
+ <div >
+  
+  <form [formGroup]="personalaccountForm.getForm()">
+    
+    
+    <ion-card>
+     <ion-card-content>
+        <ion-item>
+          <ion-label position="floating">FIRST NAME*</ion-label>
+          <ion-input type="text" formControlName="firstname" ></ion-input>
+        </ion-item>
+        <app-error-message [field]="personalaccountForm.getForm().get('firstname')" error="required" message="First Name is mandatory"></app-error-message>
+        
+        <ion-item>
+          <ion-label position="floating">LAST NAME*</ion-label>
+          <ion-input type="text" formControlName="lastname"></ion-input>
+        </ion-item>
+        <app-error-message [field]="personalaccountForm.getForm().get('lastname')" error="required" message="Last Name is mandatory"></app-error-message>
+        
+          <ion-item>
+            <ion-label position="floating">ACCOUNT NUMBER*</ion-label>
+            <ion-input type="tel" formControlName="accountnumber"></ion-input>
+          </ion-item>
+          <app-error-message [field]="personalaccountForm.getForm().get('accountnumber')" error="required" message="Account number is mandatory"></app-error-message>
+        <app-error-message [field]="personalaccountForm.getForm().get('accountnumber')" error="minlength" message="Minimum of 12 characters"></app-error-message>
+        
+          <ion-item>
+            <ion-label position="floating">CONFORM ACCOUNT NUMBER*</ion-label>
+            <ion-input type="password"formControlName="conformaccountnumber" ></ion-input>
+          </ion-item>
+          <app-error-message [field]="personalaccountForm.getForm().get('conformaccountnumber')" error="isntMatching" message="Account Number and Conform Account Number are different"></app-error-message>
+        
+        <ion-item>
+          <ion-label position="floating">IFSC CODE*</ion-label>
+          <ion-input type="text" formControlName="IFSCcode" ></ion-input>
+          
+        </ion-item>
+        <app-error-message [field]="personalaccountForm.getForm().get('IFSCcode')" error="required" message="IFSC code is mandatory"></app-error-message>
+        <ion-button >GET IFSC</ion-button>
+        
+        <ion-item>
+          <ion-label position="floating">BANK NAME*</ion-label>
+          <ion-input type="text"  formControlName="bankname"></ion-input>
+        </ion-item>
+        <app-error-message [field]="personalaccountForm.getForm().get('bankname')" error="required" message="Bank Name is mandatory"></app-error-message>
+        <ion-item>
+          <ion-label position="floating">BRANCH NAME*</ion-label>
+          <ion-input type="text" formControlName="branchname"></ion-input>
+        </ion-item>
+        <app-error-message [field]="personalaccountForm.getForm().get('branchname')" error="required" message="Branch Name is mandatory"></app-error-message>
+        <ion-item>
+          <ion-label position="floating">ADDRESS*</ion-label>
+          <ion-input type="text"formControlName="address"></ion-input>
+        </ion-item>
+        <app-error-message [field]="personalaccountForm.getForm().get('address')" error="required" message="Address is mandatory"></app-error-message>
+      </ion-card-content>
+    </ion-card>
+   <ion-button size="full" color="secondary" shape="round" routerLink="/userpage/makepayment"> SAVE</ion-button>
+  </form>
+</div>
+
+</ion-content>

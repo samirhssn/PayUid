@@ -1,0 +1,56 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-button color="dark" size="full" routerLink="/userpage/billpay" >
+        <ion-icon slot="icon-only" name="arrow-back"  ></ion-icon>
+      
+      </ion-button>
+      <ion-title color="dark"> Water bill </ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen="true">
+  
+  
+   
+      <ion-card class="flex-center">
+      <ion-card-content>
+        
+    <ion-item>
+      <ion-label>Service Provider </ion-label>
+      <ion-select  cancelText="cancel" okText="Okay">
+        <ion-select-option value="bacon">Select Service Provider</ion-select-option>
+        <ion-select-option value="olives">Local Service Provider</ion-select-option>
+        
+      </ion-select>
+    </ion-item>
+    
+    
+   <ion-item>
+    <ion-label>STATE</ion-label>
+    <ion-select  okText="Okay" cancelText="Dismiss">
+      <ion-select-option value="brown">Puducherry</ion-select-option>
+      <ion-select-option value="blonde">Tamil Nadu</ion-select-option>
+      
+    </ion-select>
+  </ion-item>
+  
+  <ion-item>
+    
+
+    <ion-label>  DISTRICT</ion-label>
+    <ion-select  cancelText="cancel" okText="Okay!">
+      <ion-select-option value="bacon">Villupuram</ion-select-option>
+      <ion-select-option value="olives">Salem</ion-select-option>
+      <ion-select-option value="xcheese">Trichy</ion-select-option>
+      <ion-select-option value="peppers">Cuddalore</ion-select-option>
+      
+    </ion-select>
+  </ion-item>
+  
+  <ion-button color="secondary" size="full">pay</ion-button>
+</ion-card-content>
+</ion-card>
+
+ 
+</ion-content>

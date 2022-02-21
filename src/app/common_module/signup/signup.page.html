@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-button color="dark" size="full" routerLink="/login" >
+        <ion-icon slot="icon-only" name="arrow-back" ></ion-icon>
+    </ion-button>
+    </ion-buttons>
+    <ion-title color="dark" > SIGN UP</ion-title>
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content class="ion-padding" >
+  
+ <div >
+  
+  <form [formGroup]="signupForm.getForm()">
+    <h1>Create Account,</h1>
+    <h3>Sign up to get started!</h3>
+    
+    <ion-card>
+     <ion-card-content>
+        <ion-item>
+          <ion-label position="floating">First Name*</ion-label>
+          <ion-input type="text" formControlName="firstname"></ion-input>
+        </ion-item>
+        <app-error-message [field]="signupForm.getForm().get('firstname')" error="required" message="First Name is mandatory"></app-error-message>
+        <ion-item>
+          <ion-label position="floating">Last Name*</ion-label>
+          <ion-input type="text" formControlName="lastname"></ion-input>
+        </ion-item>
+        <app-error-message [field]="signupForm.getForm().get('lastname')" error="required" message="Last Name is mandatory"></app-error-message>
+          <ion-item>
+            <ion-label position="floating">Email*</ion-label>
+            <ion-input type="email" formControlName="email"></ion-input>
+          </ion-item>
+        <app-error-message [field]="signupForm.getForm().get('email')" error="required" message="Email is mandatory"></app-error-message>
+        <app-error-message [field]="signupForm.getForm().get('email')" error="email" message="Email is invalid"></app-error-message>
+          <ion-item>
+            <ion-label position="floating">Password*</ion-label>
+            <ion-input type="password" formControlName="password" [type]="showPassword ? 'text' :'password'"></ion-input>
+            <ion-icon slot="end" [name]="passwordToggleIcon" (click)="togglePassword()"></ion-icon>
+          </ion-item>
+        <app-error-message [field]="signupForm.getForm().get('password')" error="required" message="Password is mandatory"></app-error-message>
+        <app-error-message [field]="signupForm.getForm().get('password')" error="minlength" message="Minimum of 6 characters"></app-error-message>
+        <ion-item>
+          <ion-label position="floating">Confirm Password*</ion-label>
+          <ion-input type="password" formControlName="repeatPassword" [type]="showPassword ? 'text' :'password'"></ion-input>
+          <ion-icon slot="end" [name]="passwordToggleIcon" (click)="togglePassword()"></ion-icon>
+        </ion-item>
+        <app-error-message [field]="signupForm.getForm().get('repeatPassword')" error="isntMatching" message="Password and Repeat password are different"></app-error-message>
+        <ion-item>
+          <ion-label position="floating">Phone number*</ion-label>
+          <ion-input type="tel" formControlName="phone"></ion-input>
+        </ion-item>
+        <app-error-message [field]="signupForm.getForm().get('phone')" error="required" message="Phone is mandatory"></app-error-message>
+      </ion-card-content>
+    </ion-card>
+   <ion-button size="full" color="secondary" shape="round" routerLink="/user_module/home"> Register</ion-button>
+  </form>
+</div>
+<p class="footer-text">I'm already a member, <a routerLink="/login">Sign In</a></p>
+</ion-content>

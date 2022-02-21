@@ -1,0 +1,44 @@
+
+    
+.flex-center{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ion-card-subtitle {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+p{
+    text-align: center;
+    a{
+        color:#000;
+        text-decoration:underline;
+        padding-left:15px;
+    }
+}
+ion-content{
+    --background:rgb(252, 246, 246);
+}
+
+ion-avatar{
+    margin-left: 10px;
+    margin-right: 20px;
+}
+ 
+    
+
+
+    .ion-align-item-end{
+        margin-top: 80px;
+        margin-bottom: 30px;
+     
+    
+    }
+
+
+.flex-center{
+    color:secondary;
+}
+

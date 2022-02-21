@@ -1,0 +1,46 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-button color="dark" size="full" routerLink="/home">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+
+      </ion-button>
+      <ion-title color="dark"> LOGIN </ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <h1>Welcome,</h1>
+  <h3>Sign in to continue!</h3>
+
+  <ion-card>
+    <ion-card-content>
+      <form [formGroup]="form">
+        <ion-item>
+          <ion-label position="floating" color="dark">EMAIL*</ion-label>
+          <ion-input type="email" formControlName="email"></ion-input>
+        </ion-item>
+        <app-error-message [field]="form.get('email')" error="required" message="Email is mandatory">
+        </app-error-message>
+        <app-error-message [field]="form.get('email')" error="email" message="Email is invalid"></app-error-message>
+
+        <ion-item>
+          <ion-label position="floating" color="dark">PASSWORD*</ion-label>
+          <ion-input type="password" formControlName="password" [type]="showPassword ? 'text' :'password'"></ion-input>
+          <ion-icon slot="end" [name]="passwordToggleIcon" (click)="togglePassword()"></ion-icon>
+        </ion-item>
+        <app-error-message [field]="form.get('password')" error="required" message="Password is mandatory">
+        </app-error-message>
+
+
+        <ion-button color="dark" fill="clear" size="full" shape="round" [disabled]="!form.get('email').valid"
+          routerLink="/forget-password">Forgot email/password</ion-button>
+        <ion-button color="secondary" size="full" shape="round" [disabled]="!form.valid" (click)="login()">Login
+        </ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+  <p class="footer-text">I'm a new user, <a routerLink="/signup" (click)="signup()">Sign Up</a></p>
+</ion-content>

@@ -1,20 +1,38 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+<ion-header>
+  <ion-toolbar color="secondary">
+    
+    <ion-title color="dark" > HOME </ion-title>
   </ion-toolbar>
+  
 </ion-header>
+<ion-content>
+  <div class="center">
+    <ion-slides #slides pager="true" [options]="slideOpts" (ionSlideDidChange)="ionSlideChange(slides)">
+      <ion-slide class="step-one">
+        <img margintop20 src="../../assets/slide1.jpg.jpg"/>
+        <p>Pay bills is used to pay your utility bill, by using the netbanking, credit cards and debit cards
+          
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+   </p>
+      </ion-slide>
+      <ion-slide class="step-one">
+        <img margintop20 src="../../assets/slide2.png"/>
+        <p>Make payment service is used to pay third party payment, by using the netbanking, credit cards and debit cards
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+         </p>
+      </ion-slide>
+      <ion-slide class="step-one">
+        <img margintop20 src="../../assets/slide3.png"/>
+        <p>Receive payment service is used to receive payment from third party, by using the netbanking, credit cards and debit cards
+
+          </p>
+      </ion-slide>
+      
+
+    </ion-slides>
+    <ion-button class="tour-button"(click)="next()" routerLink="/login">
+      <div class="parent"> {{buttonName}}</div>
+    </ion-button>
+
   </div>
 </ion-content>
