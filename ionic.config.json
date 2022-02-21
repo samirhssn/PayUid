@@ -1,0 +1,7 @@
+{
+  "name": "payuid",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
