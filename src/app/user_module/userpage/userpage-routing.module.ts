@@ -21,19 +21,9 @@ const routes: Routes = [
     loadChildren: () => import('./billpay/billpay.module').then( m => m.BillpayPageModule)
   },
   {
-    path: 'details',
-    loadChildren: () => import('./details/details.module').then( m => m.DetailsPageModule)
+    path: 'qrcode',
+    loadChildren: () => import('./qrcode/qrcode.module').then( m => m.QrcodePageModule)
   },
- 
-  
-  {
-    path: 'push-notification',
-    loadChildren: () => import('./push-notification/push-notification.module').then( m => m.PushNotificationPageModule)
-  },
-  
- 
-  
-  
 ];
 
 @NgModule({
